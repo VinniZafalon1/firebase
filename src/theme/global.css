@@ -1,0 +1,116 @@
+:root {
+  --ion-color-primary: #2563eb;
+  --ion-color-primary-rgb: 37, 99, 235;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #2057cf;
+  --ion-color-primary-tint: #3b73ed;
+  --ion-font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --page-bg: #f5f7fb;
+  --ink: #17233b;
+  --muted: #72809a;
+  --line: #e5eaf2;
+}
+* { box-sizing: border-box; }
+body { color: var(--ink); background: var(--page-bg); }
+ion-content.auth-content { --background: #fff; }
+.auth-shell { min-height: 100%; display: grid; grid-template-columns: minmax(320px, .9fr) 1.1fr; }
+.brand-panel { min-height: 100vh; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 44px clamp(32px, 7vw, 100px); color: #fff; background: linear-gradient(145deg, #1d4ed8, #2563eb 55%, #3b82f6); }
+.brand-panel::before,.brand-panel::after { content: ''; position: absolute; border: 1px solid rgba(255,255,255,.15); border-radius: 50%; pointer-events: none; }
+.brand-panel::before { width: 440px; height: 440px; right: -210px; top: 25%; }
+.brand-panel::after { width: 280px; height: 280px; right: -120px; top: 34%; }
+.brand-lockup,.app-brand { display: flex; align-items: center; gap: 9px; font-weight: 750; letter-spacing: -.06em; font-size: 22px; }
+.brand-symbol { font-size: 24px; }
+.brand-message { position: relative; z-index: 1; margin: auto 0; }
+.eyebrow { color: #8492aa; display: block; font-size: 10px; font-weight: 700; letter-spacing: .15em; }
+.brand-message .eyebrow,.brand-caption { color: rgba(255,255,255,.68); }
+.brand-message h1,.page-heading h2,.welcome-area h1,.profile-area h1 { margin: 22px 0 18px; font-size: clamp(48px, 5.3vw, 72px); line-height: .99; letter-spacing: -.065em; font-weight: 650; }
+.brand-message h1 em,.page-heading h2 em,.welcome-area h1 em,.profile-area h1 em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
+.brand-message p { color: rgba(255,255,255,.75); font-size: 14px; line-height: 1.8; }
+.brand-caption { font-size: 9px; letter-spacing: .16em; }
+.auth-main { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 42px clamp(28px, 8vw, 112px); }
+.secure-note { display: flex; align-items: center; gap: 8px; color: #7b879a; font-size: 9px; letter-spacing: .13em; }
+.secure-note ion-icon { color: var(--ion-color-primary); font-size: 16px; }
+.auth-card { width: 100%; max-width: 410px; margin: auto; padding: 50px 0; }
+.page-heading { margin-bottom: 30px; }
+.page-heading h2 { color: var(--ink); font-size: 48px; margin: 16px 0 12px; }
+.page-heading h2 em,.welcome-area h1 em,.profile-area h1 em { color: var(--ion-color-primary); }
+.page-heading p,.lead { color: var(--muted); font-size: 13px; line-height: 1.75; margin: 0; }
+.app-form { display: grid; gap: 18px; }
+ion-input { --background: #fff; --border-color: var(--line); --border-radius: 9px; --highlight-color-focused: var(--ion-color-primary); --padding-start: 14px; --padding-end: 12px; --padding-top: 12px; --padding-bottom: 12px; color: var(--ink); font-size: 14px; }
+ion-input::part(native) { min-height: 22px; }
+ion-input::part(label) { color: #65728a; font-size: 9px; font-weight: 700; letter-spacing: .12em; margin-bottom: 9px; }
+ion-input::part(container) { border: 1px solid var(--line); border-radius: 9px; }
+ion-input.has-focus::part(container) { border-color: var(--ion-color-primary); box-shadow: 0 0 0 3px rgba(37,99,235,.09); }
+.visibility-button { height: 34px; --color: #8490a3; margin: 0; }
+.visibility-button ion-icon { font-size: 18px; }
+.forgot-row { display: flex; justify-content: flex-end; margin-top: -9px; }
+a { color: var(--ion-color-primary); text-decoration: none; font-weight: 600; font-size: 12px; }
+.submit-button { height: 49px; margin: 3px 0 0; --border-radius: 9px; font-size: 13px; font-weight: 650; text-transform: none; letter-spacing: 0; }
+.submit-button ion-icon { font-size: 18px; }
+.submit-button ion-spinner { width: 19px; height: 19px; }
+.auth-switch { text-align: center; margin: 24px 0 0; color: var(--muted); font-size: 12px; }
+.auth-switch a { margin-left: 4px; }
+.auth-footer { display: flex; justify-content: space-between; color: #9aa4b4; font-size: 8px; letter-spacing: .13em; }
+.config-hint { margin: -12px 0 22px; border: 1px solid #f3d28c; border-radius: 8px; padding: 12px; background: #fff8e8; color: #795b18; font-size: 11px; line-height: 1.6; }
+.config-hint code { font-size: 11px; }
+.compact-heading { margin-bottom: 20px; }
+.compact-heading h2 { font-size: 43px; margin: 12px 0 9px; }
+.compact-heading p { font-size: 12px; }
+.app-content { --background: var(--page-bg); }
+.app-container { width: min(100% - 40px, 920px); min-height: 100%; margin: 0 auto; display: flex; flex-direction: column; }
+.app-header { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; }
+.app-brand { color: var(--ink); font-size: 19px; }
+.app-brand span { color: var(--ion-color-primary); font-size: 21px; }
+.logout-button,.back-button { --color: #697791; font-size: 11px; text-transform: none; }
+.welcome-area,.profile-area { width: min(100%, 520px); margin: auto; padding: 48px 0 64px; }
+.welcome-area h1,.profile-area h1 { color: var(--ink); font-size: 62px; margin: 18px 0 12px; }
+.welcome-area .lead,.profile-area .lead { margin-bottom: 28px; }
+.profile-summary { margin: 0 0 14px; padding: 17px; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 12px 30px rgba(30,52,90,.05); display: flex; align-items: center; gap: 14px; }
+.avatar { width: 54px; height: 54px; flex: none; display: grid; place-items: center; overflow: hidden; border-radius: 50%; background: #e8efff; color: var(--ion-color-primary); font-family: Georgia, serif; font-size: 18px; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.summary-copy { display: grid; gap: 4px; min-width: 0; }
+.summary-copy .eyebrow { font-size: 8px; }
+.summary-copy strong { font-size: 13px; }
+.summary-copy>span:last-child { color: var(--muted); font-size: 11px; overflow-wrap: anywhere; }
+.summary-mark { margin-left: auto; color: #b5c4e0; font-size: 25px; }
+.complete-note { display: flex; gap: 10px; align-items: flex-start; padding: 13px; border-radius: 10px; background: #eef4ff; color: #43619c; font-size: 11px; line-height: 1.6; box-shadow: none; }
+.complete-note ion-icon { flex: none; font-size: 18px; }
+.welcome-note { text-align: center; margin-top: 25px; color: #a1aabc; font-size: 8px; letter-spacing: .16em; }
+.welcome-note span { color: var(--ion-color-primary); font-size: 13px; margin-left: 4px; }
+.loading-state { min-height: 150px; display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--muted); font-size: 12px; }
+.profile-container { max-width: 720px; }
+.profile-area { width: min(100%, 500px); padding-top: 28px; }
+.profile-area h1 { font-size: 49px; margin: 14px 0 9px; }
+.profile-area .lead { font-size: 12px; margin-bottom: 22px; }
+.profile-form { display: grid; gap: 15px; }
+.photo-card { display: flex; align-items: center; gap: 15px; margin: 0 0 4px; padding: 15px; border: 1px solid var(--line); border-radius: 12px; box-shadow: none; }
+.avatar-large { width: 68px; height: 68px; font-size: 22px; }
+.photo-copy { display: grid; justify-items: start; gap: 5px; }
+.photo-copy strong { font-size: 12px; }
+.photo-copy>span { color: var(--muted); font-size: 9px; }
+.photo-picker { display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 7px; color: #39588f; cursor: pointer; font-size: 10px; font-weight: 650; }
+.photo-picker ion-icon { font-size: 14px; }
+.file-input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+@media (max-width: 760px) {
+  .auth-shell { display: block; }
+  .brand-panel { min-height: 235px; height: 30vh; padding: 22px 7%; }
+  .brand-message { margin: auto 0 0; }
+  .brand-message h1 { font-size: 42px; margin: 10px 0 0; }
+  .brand-message p,.brand-caption { display: none; }
+  .brand-lockup { font-size: 19px; }
+  .auth-main { min-height: 70vh; padding: 24px 8% 18px; }
+  .auth-card { max-width: 470px; padding: 30px 0; }
+  .page-heading { margin-bottom: 23px; }
+  .page-heading h2 { font-size: 42px; }
+  .auth-footer { padding-top: 12px; }
+  .app-container { width: min(100% - 32px, 560px); }
+  .app-header { padding: 18px 0; }
+  .welcome-area { padding: 34px 0 44px; }
+  .welcome-area h1 { font-size: 53px; }
+  .profile-area { padding-top: 20px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .auth-card,.welcome-area,.profile-area { animation: rise-in .35s ease-out both; }
+  @keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+}
